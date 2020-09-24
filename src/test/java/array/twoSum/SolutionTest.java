@@ -1,4 +1,4 @@
-package array.twosum;
+package array.twoSum;
 
 import static org.junit.jupiter.api.Assertions.*;
 

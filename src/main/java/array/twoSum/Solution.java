@@ -1,6 +1,11 @@
-package array.twosum;
+package array.twoSum;
 
 import java.util.*;
+
+/*
+https://leetcode.com/problemset/all/?topicSlugs=array
+#1. Two sum
+ */
 
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
