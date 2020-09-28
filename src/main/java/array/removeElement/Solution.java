@@ -39,20 +39,4 @@ public class Solution {
         }
         return nums.length;
     }
-
-    public static void main(String[] args) {
-        //int[] nums = new int[]{0,1,2,2,3,0,4,2}; //length = 5 //3,2,2,3
-        //int[] nums = new int[]{3,2,2,3};
-        /*
-        [2]
-        3
-
-
-[2,2,2]
-2
-         */
-        int[] nums = new int[]{2, 2, 2};
-        Solution solution = new Solution();
-        System.out.println(solution.removeElement(nums, 2));
-    }
 }
