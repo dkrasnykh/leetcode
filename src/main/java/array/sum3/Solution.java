@@ -28,17 +28,17 @@ public class Solution {
 
         Set<List<Integer>> set = new HashSet<>();
         int zero = 0;
-        while(i < nums.length){
+        while (i < nums.length) {
             if (nums[i] > 0) break;
-            if(nums[i] == 0){
+            if (nums[i] == 0) {
                 zero++;
             }
             int j = nums.length - 1;
-            while(j >= 0){
+            while (j >= 0) {
                 if (nums[j] <= 0) break;
                 int target = -(nums[i] + nums[j]);
-                int k = binarySearch(nums, target, i+1, j-1);
-                if(k!=-1){
+                int k = binarySearch(nums, target, i + 1, j - 1);
+                if (k != -1) {
                     List<Integer> temp = Arrays.asList(nums[i], target, nums[j]);
                     set.add(temp);
                 }
@@ -46,18 +46,18 @@ public class Solution {
             }
             i++;
         }
-        if(zero>=3) set.add(Arrays.asList(0,0,0));
+        if (zero >= 3) set.add(Arrays.asList(0, 0, 0));
         result.addAll(set);
         return result;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{-1,0,1,2,-1,-4};
+        int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
         //int[] nums = new int[]{1,2,-2,-1};
         //int[] nums = new int[]{0, 0, 0};
         Solution solution = new Solution();
         List<List<Integer>> result = solution.threeSum(nums);
-        for(List<Integer> res: result){
+        for (List<Integer> res : result) {
             System.out.println(res);
         }
     }
